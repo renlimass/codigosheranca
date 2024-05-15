@@ -1,0 +1,53 @@
+public class Main {
+    public static void main(String[] args) {
+class Animal {
+    private String nome;
+    private int idade;
+    private String caracteristica;
+
+    public Animal(String nome, int idade, String caracteristica) {
+        this.nome = nome;
+        this.idade = idade;
+        this.caracteristica = caracteristica;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public String getCaracteristica() {
+        return caracteristica;
+    }
+        public void setCaracteristica(String caracteristica) {
+        this.caracteristica = caracteristica;
+    }
+}
+
+// Subclasse Peixe que herda da superclasse Animal
+class Peixe extends Animal {
+    public Peixe(String nome, int idade, String caracteristica) {
+        super(nome, idade, caracteristica);
+
+    }
+
+    public String toString() {
+        return "Nome: " + getNome() + ", Idade: " + getIdade() + ", Característica: " + getCaracteristica() ;
+    }
+}
+
+// Exibição da tela
+        Peixe peixe = new Peixe("Nemo", 5, "Cor Vermelho-Ferrugem");
+        System.out.println(peixe.toString());
+    }
+}
